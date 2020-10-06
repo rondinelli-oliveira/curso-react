@@ -1,0 +1,12 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+# tira os espaços no final da linha
+trim_trailing_whitespace = true
+# insere um linha em branco no final do arquivo
+insert_final_newline = true
+# entender dinal da linha \r\n
+end_of_line = lf

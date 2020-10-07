@@ -1,23 +1,12 @@
-import { Router } from 'express';
+import Router from 'express';
+import appointmentsRouter from './appointments.routes';
+import userRouter from './users.routes';
+import sessionsRouter from './sessions.routes';
 
 const routes = Router();
 
-routes.post('/users', (request, response) => {
-  const { name, email } = request.body;
-
-  const user = {
-    name,
-    email,
-  };
-
-  return response.json(user);
-});
+routes.use('/appointments', appointmentsRouter);
+routes.use('/users', userRouter);
+routes.use('/sessions', sessionsRouter);
 
 export default routes;
-// const routes = Router();
-
-// routes.get('/', (request, response) =>
-//   response.json({ message: 'Hello Rondinelli!' }),
-// );
-
-// export default routes;

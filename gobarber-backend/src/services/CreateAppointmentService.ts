@@ -35,3 +35,5 @@ class CreateAppointmentService {
     return appointment;
   }
 }
+
+export default CreateAppointmentService;
